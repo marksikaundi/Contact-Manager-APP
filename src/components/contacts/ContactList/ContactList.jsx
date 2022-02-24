@@ -10,7 +10,7 @@ let ContactList = () => {
                     <div className="grid">
                         <div className="row">
                             <div className="col">
-                                <p className="h3">Contact Manager
+                                <p className="h3 fw-bold">Contact Manager
                                      <Link to={'/contacts/add'} className="btn btn-primary ms-2"><i className="fa fa-plus-circle me-2" /> New</Link>
                                 </p>
                                 <p className="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque perspiciatis similique debitis facere nihil sapiente, quas dolor quidem tenetur nulla error, cumque, dicta id et exercitationem unde totam earum vel!</p>
@@ -42,7 +42,7 @@ let ContactList = () => {
                         <div className="col-md-6">
                             <div className="card">
                                 <div className="card-body">
-                                    <div className="row">
+                                    <div className="row align-items-center d-flex justify-content-around">
                                     <div className="col-md-4">
                                         <img src="https://comptes-actes-experts.fr/wp-content/uploads/2021/05/mous-e1620808026160.png" className="contact-img" alt="Avatar" />
                                     </div>
@@ -59,8 +59,10 @@ let ContactList = () => {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className="col-md-1">
-
+                                    <div className="col-md-1 d-flex flex-column align-items-center">
+                                    <Link to={`/contacts/view/:contactId`} className="btn btn-warning my-1"><i className="fa fa-eye"/></Link>
+                                    <Link to={`/contacts/edit/:contactId`} className="btn btn-primary my-1"><i className="fa fa-pen"/></Link>
+                                    <button className="btn btn-danger my-1"><i className="fa fa-trash"/></button>
                                     </div>
                                     </div>
                                 </div>
