@@ -1,0 +1,10 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #eee8e4 !important;
+}
+
+.contact-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
