@@ -4,6 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// font awesome icons
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+// bootstrap css
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+// bootstrap js
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
