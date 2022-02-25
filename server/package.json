@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "json-server --watch db.json -p 9000"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mark Sikaundi",
   "license": "ISC",
   "dependencies": {
     "json-server": "^0.17.0"
