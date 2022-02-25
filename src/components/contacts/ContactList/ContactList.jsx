@@ -1,10 +1,43 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
+import { ContactService } from "../../../services/ContactService";
 
 let ContactList = () => {
+
+    let [state, setState] = useState({
+        loading : false,
+        contacts : [],
+        errorMessage : ''
+
+    });
+
+    useEffect(async () => {
+        try {
+            setState({...state, loading: true});
+            let response = await ContactService.getAllContacts();
+            setState({
+                ...state,
+                loading: false,
+                contacts: response.data
+            });
+        }
+        catch (error) {
+            setState({
+                ...state,
+                loading: false,
+                errorMessage: error.message
+            });
+        }
+    }, []);
+
+
+    let {loading, contacts, errorMessage} = state;
+
+
     return (
         <React.Fragment>
+            <pre>{JSON.stringify(contacts)}</pre>
             <section className="contact-search p-3">
                 <div className="container">
                     <div className="grid">
